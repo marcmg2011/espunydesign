@@ -1,0 +1,16 @@
+# Cloudflare Pages redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Normalize old/likely-typed paths to the canonical language folders
+/es           /                 301
+/es/*         /                 301
+/es/          /                 301
+/spanish      /                 301
+/castellano   /                 301
+/catalan      /ca/              301
+/catala       /ca/              301
+/english      /en/              301
+
+# www -> apex (Cloudflare Pages custom domains usually handle this at the
+# domain level, but this is a safe fallback if www is added as an alias)
+https://www.espunydesign.com/*  https://espunydesign.com/:splat  301
